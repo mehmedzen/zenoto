@@ -132,6 +132,14 @@ export const mockAraclar: Arac[] = [
   },
 ]
 
-export const markalar = [...new Set(mockAraclar.map(a => a.marka))].sort()
-export const yakitTipleri = [...new Set(mockAraclar.map(a => a.yakit))].sort()
-export const vitesTipleri = [...new Set(mockAraclar.map(a => a.vites))].sort()
+export const markalar = Array.from(
+  new Set(mockAraclar.map(a => a.marka))
+).sort()
+
+export const yakitTipleri = Array.from(
+  new Set(mockAraclar.map(a => a.yakit))
+).sort()
+
+export const vitesTipleri = Array.from(
+  new Set(mockAraclar.map(a => a.vites))
+).sort()
